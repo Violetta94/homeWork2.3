@@ -2,35 +2,35 @@ package animals;
 
 import java.util.Objects;
 
-public class amphibians_1_2 extends animals_1 {
+public abstract class Birds extends Animals {
     private String environment;
 
-    public amphibians_1_2(String name, String environment) {
+    public Birds(String name, String environment) {
         super(name);
         this.environment = environment;
     }
 
-    public amphibians_1_2(String name, int age, String environment) {
+    public Birds(String name, int age, String environment) {
         super(name, age);
         this.environment = environment;
     }
+
     @Override
     public void eat() {
+        System.out.println("я ем");
     }
 
     @Override
     public void go() {
-
+        System.out.println("я передвигаюсь");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("я сплю");
     }
 
-    public void hunt() {
-
-    }
+    public abstract void hunt();
 
     public String getEnvironment() {
         return environment;
@@ -47,19 +47,20 @@ public class amphibians_1_2 extends animals_1 {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        amphibians_1_2 that = (amphibians_1_2) o;
-        return Objects.equals(environment, that.environment);
+        if (!super.equals(o)) return false;
+        Birds Birds = (Birds) o;
+        return Objects.equals(environment, Birds.environment);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(environment);
+        return Objects.hash(super.hashCode(), environment);
     }
 
     @Override
     public String toString() {
-        return "Земноводное - " + getName() + ", возраст - " + getAge()+
-                ", среда обитания - " + getEnvironment() +
-                '.';
+        return "birds_1_3{" +
+                "environment='" + environment + '\'' +
+                '}';
     }
 }

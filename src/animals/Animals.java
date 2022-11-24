@@ -2,7 +2,7 @@ package animals;
 
 import java.util.Objects;
 
-public abstract class animals_1 {
+public abstract class Animals {
     private String name;
     private final int age;
 
@@ -10,12 +10,12 @@ public abstract class animals_1 {
     public abstract void sleep();
     public abstract void go();
 
-    public animals_1(String name) {
+    public Animals(String name) {
         this.name = name;
         this.age =0;
     }
 
-    public animals_1(String name, int age) {
+    public Animals(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -39,7 +39,7 @@ public abstract class animals_1 {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        animals_1 animals_1 = (animals_1) o;
+        Animals animals_1 = (Animals) o;
         return age == animals_1.age && Objects.equals(name, animals_1.name);
     }
 

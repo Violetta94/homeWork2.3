@@ -2,22 +2,22 @@ package animals;
 
 import java.util.Objects;
 
-public abstract class mammals_1_1 extends animals_1 {
+public abstract class Mammals extends Animals {
     private String environment;
     private int speed;
 
-    public mammals_1_1(String name, String environment) {
+    public Mammals(String name, String environment) {
         super(name);
         this.environment = environment;
     }
 
-    public mammals_1_1(String name, String environment, int speed) {
+    public Mammals(String name, String environment, int speed) {
         super(name);
         this.environment = environment;
         this.speed = speed;
     }
 
-    public mammals_1_1(String name, int age, String environment, int speed) {
+    public Mammals(String name, int age, String environment, int speed) {
         super(name, age);
         this.environment = environment;
         this.speed = speed;
@@ -25,17 +25,17 @@ public abstract class mammals_1_1 extends animals_1 {
 
     @Override
     public void go() {
-
+        System.out.println("я гуляю в зоопарке");
     }
 
     @Override
     public void eat() {
-
+        System.out.println("я ем всё");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("я сплю ночью и днём");
     }
 
     public abstract void walk();
@@ -67,7 +67,7 @@ public abstract class mammals_1_1 extends animals_1 {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        mammals_1_1 that = (mammals_1_1) o;
+        Mammals that = (Mammals) o;
         return speed == that.speed && Objects.equals(environment, that.environment);
     }
 

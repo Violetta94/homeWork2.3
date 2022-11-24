@@ -2,39 +2,41 @@ package animals;
 
 import java.util.Objects;
 
-public class flightless_1_3_1 extends birds_1_3{
+public class Flying extends Birds {
     private String movement;
 
-    public flightless_1_3_1(String name, String environment, String movement) {
+    public Flying(String name, String environment, String movement) {
         super(name, environment);
         this.movement = movement;
     }
 
-    public flightless_1_3_1(String name, int age, String environment, String movement) {
+    public Flying(String name, int age, String environment, String movement) {
         super(name, age, environment);
         this.movement = movement;
     }
 
+    @Override
     public void eat() {
+        System.out.println("я ем");
     }
 
     @Override
     public void go() {
-
+        System.out.println("я могу передвигаться с помощью полета");
     }
 
     @Override
     public void sleep() {
-
+        System.out.println("я сплю");
     }
 
     @Override
     public void hunt() {
-
+        System.out.println("я нападаю");
     }
 
-    public void walk() {
-
+    public void fly(){
+        System.out.println("я лечу");
     }
 
     public String getMovement() {
@@ -53,7 +55,7 @@ public class flightless_1_3_1 extends birds_1_3{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        flightless_1_3_1 that = (flightless_1_3_1) o;
+        Flying that = (Flying) o;
         return Objects.equals(movement, that.movement);
     }
 
@@ -63,9 +65,8 @@ public class flightless_1_3_1 extends birds_1_3{
     }
 
     @Override
-    public String
-    toString() {
-        return "Нелетающие - " + getName() + ", возраст - " + getAge() +
+    public String toString() {
+        return "Летающие - " + getName() + ", возраст - " + getAge() +
                 ", среда обитания - " + getEnvironment() + ", тип передвижения - " + getMovement() + '.';
     }
 }

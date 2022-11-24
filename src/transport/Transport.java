@@ -1,6 +1,6 @@
 package transport;
 
-public abstract class transport {
+public abstract class Transport {
     private  String brand;
     private  String model;
     private final int year;
@@ -8,7 +8,7 @@ public abstract class transport {
     private String color;
     private int maxSpeed;
 
-    public transport(String brand, String model, int year, String country, String color, int maxSpeed) {
+    public Transport(String brand, String model, int year, String country, String color, int maxSpeed) {
         this.brand = brand;
         this.model = model;
         this.year = year;

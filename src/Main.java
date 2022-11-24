@@ -1,11 +1,11 @@
 import transport.Bus;
 import transport.Car;
 import transport.Train;
-import animals.herbivores_1_1_1;
-import animals.predators_1_1_2;
-import animals.amphibians_1_2;
-import animals.flightless_1_3_1;
-import animals.flying_1_3_2;
+import animals.Herbivores;
+import animals.Predators;
+import animals.Amphibians;
+import animals.Flightless;
+import animals.Flying;
 
 public class Main {
     public static void main(String[] args) {
@@ -35,36 +35,36 @@ public class Main {
         bmwBus.busPrez();
         mercedec.refill();
 
-     herbivores_1_1_1 gazelle = new herbivores_1_1_1("Газель", 3,"зоопарк", 60,"трава");
-     herbivores_1_1_1 giraffe = new herbivores_1_1_1("Жираф", 2,"сафари-парк", 15,"трава");
-     herbivores_1_1_1 horse = new herbivores_1_1_1("Лошадь", 1,"поле колосистое", 80,"трава");
+     Herbivores gazelle = new Herbivores("Газель", 3,"зоопарк", 60,"трава");
+     Herbivores giraffe = new Herbivores("Жираф", 2,"сафари-парк", 15,"трава");
+     Herbivores horse = new Herbivores("Лошадь", 1,"поле колосистое", 80,"трава");
      System.out.println(gazelle);
      System.out.println(giraffe);
      System.out.println(horse);
 
-     predators_1_1_2 hyena = new predators_1_1_2("Гиена", 3 , "сафари", 50,"мясо антилоп");
-     predators_1_1_2 tiger = new predators_1_1_2("Тигр", 5 , "зоопарк", 75,"мясо");
-     predators_1_1_2 bear = new predators_1_1_2("Медведь", 10 , "тайга", 25,"мясо");
+     Predators hyena = new Predators("Гиена", 3 , "сафари", 50,"мясо антилоп");
+     Predators tiger = new Predators("Тигр", 5 , "зоопарк", 75,"мясо");
+     Predators bear = new Predators("Медведь", 10 , "тайга", 25,"мясо");
      System.out.println(hyena);
      System.out.println(tiger);
      System.out.println(bear);
 
-        amphibians_1_2 frog = new amphibians_1_2("Лягушка", 1, "болото");
-        amphibians_1_2 snake = new amphibians_1_2("Уж пресноводный", 2,"лес");
+        Amphibians frog = new Amphibians("Лягушка", 1, "болото");
+        Amphibians snake = new Amphibians("Уж пресноводный", 2,"лес");
         System.out.println(frog);
         System.out.println(snake);
 
-        flightless_1_3_1 peacock = new flightless_1_3_1("Павлин", 5, "зоопарк","ходьба");
-        flightless_1_3_1 penguin = new flightless_1_3_1("Пингвин", 4, "арктика","ходьба");
-        flightless_1_3_1 dodo = new flightless_1_3_1("Птица додо", 8, "зоопарк","ходьба");
+        Flightless peacock = new Flightless("Павлин", 5, "зоопарк","ходьба");
+        Flightless penguin = new Flightless("Пингвин", 4, "арктика","ходьба");
+        Flightless dodo = new Flightless("Птица додо", 8, "зоопарк","ходьба");
         System.out.println(peacock);
         System.out.println(penguin);
         System.out.println(dodo);
 
 
-        flying_1_3_2 seagull = new flying_1_3_2("Чайка", 2, "у моря","полёт");
-        flying_1_3_2 albatross = new flying_1_3_2("Альбатрос", 4, "у моря","полёт");
-        flying_1_3_2 falcon = new flying_1_3_2("Сокол", 10, "лес","полёт");
+        Flying seagull = new Flying("Чайка", 2, "у моря","полёт");
+        Flying albatross = new Flying("Альбатрос", 4, "у моря","полёт");
+        Flying falcon = new Flying("Сокол", 10, "лес","полёт");
         System.out.println(seagull);
         System.out.println(albatross);
         System.out.println(falcon);

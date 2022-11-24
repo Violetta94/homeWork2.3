@@ -2,42 +2,46 @@ package animals;
 
 import java.util.Objects;
 
-public class herbivores_1_1_1 extends mammals_1_1{
+public class Predators extends Mammals {
     private String typeFood;
 
-    public herbivores_1_1_1(String name, String environment, String typeFood) {
+    public Predators(String name, String environment, String typeFood) {
         super(name, environment);
         this.typeFood = typeFood;
     }
 
-    public herbivores_1_1_1(String name, String environment, int speed, String typeFood) {
+    public Predators(String name, String environment, int speed, String typeFood) {
         super(name, environment, speed);
         this.typeFood = typeFood;
     }
 
-    public herbivores_1_1_1(String name, int age, String environment, int speed, String typeFood) {
+    public Predators(String name, int age, String environment, int speed, String typeFood) {
         super(name, age, environment, speed);
         this.typeFood = typeFood;
     }
 
     @Override
     public void sleep() {
+        System.out.println("я сплю");
     }
 
     @Override
     public void go() {
+        System.out.println("я гуляю");
     }
 
     @Override
     public void eat() {
+        System.out.println("я ем мясо");
     }
 
     @Override
     public void walk() {
+        System.out.println("я гуляю на природе");
     }
 
-    public void graze() {
-
+    public void hunt() {
+        System.out.println("я охочусь на дичь");
     }
 
     public String getTypeFood() {
@@ -56,7 +60,7 @@ public class herbivores_1_1_1 extends mammals_1_1{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         if (!super.equals(o)) return false;
-        herbivores_1_1_1 that = (herbivores_1_1_1) o;
+        Predators that = (Predators) o;
         return Objects.equals(typeFood, that.typeFood);
     }
 
@@ -67,7 +71,7 @@ public class herbivores_1_1_1 extends mammals_1_1{
 
     @Override
     public String toString() {
-        return "Травоядное - " + getName() + ", возраст - " + getAge() +
+        return "Хищник - " + getName() + ", возраст - " + getAge() +
                 ", среда обитания - " + getEnvironment() + ", скорость - " + getSpeed() +
                 ", питается -" + getTypeFood() + '\'' +
                 '.';

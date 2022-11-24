@@ -1,6 +1,6 @@
 package transport;
 
-public class Train extends transport {
+public class Train extends Transport {
 
     private int costTrip;
     private int timeTrip;
@@ -10,7 +10,7 @@ public class Train extends transport {
 
     public Train(String brand, String model, int year, String country, String color, int maxSpeed) {
         super(brand, model, year, country, color, maxSpeed);
-        this.costTrip = 0;
+       this.costTrip = 0;
         this.timeTrip = 0;
         this.nameStation = null;
         this.terminalStation = null;

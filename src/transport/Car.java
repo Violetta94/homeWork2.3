@@ -1,7 +1,7 @@
 package transport;
 
 import java.util.regex.Pattern;
-public class Car extends transport {
+public class Car extends Transport {
     private float engineVolume;
     private String transmission;
     private final String bodyType;
